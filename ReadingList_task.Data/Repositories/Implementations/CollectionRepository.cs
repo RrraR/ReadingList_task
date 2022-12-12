@@ -26,14 +26,14 @@ public class CollectionRepository : ICollectionRepository
 
     public void AddNewCollection(UserCollection collection)
     {
-        _dbContext.Add(collection);
+        _dbContext.UserCollections.Add(collection);
         _dbContext.SaveChanges();
     }
 
     public void DeleteCollection(UserCollection collection)
     {
         _booksOfUserToCollection.DeleteCollection(collection.Id);
-        _dbContext.Remove(collection);
+        _dbContext.UserCollections.Remove(collection);
         _dbContext.SaveChanges();
     }
 }
