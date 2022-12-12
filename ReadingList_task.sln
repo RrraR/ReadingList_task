@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadingList_task.Data", "ReadingList_task.Data\ReadingList_task.Data.csproj", "{5054B88A-E5B4-41F1-95DB-48E6F7283523}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadingList_task.Services", "ReadingList_task.Services\ReadingList_task.Services.csproj", "{54721E4A-DAA0-4EAB-AED8-C130ED5811DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadingList_task.WebApi", "ReadingList_task.WebApi\ReadingList_task.WebApi.csproj", "{277D7619-334E-4C4F-85B0-D29AECE1EADB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5054B88A-E5B4-41F1-95DB-48E6F7283523}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5054B88A-E5B4-41F1-95DB-48E6F7283523}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5054B88A-E5B4-41F1-95DB-48E6F7283523}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5054B88A-E5B4-41F1-95DB-48E6F7283523}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54721E4A-DAA0-4EAB-AED8-C130ED5811DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54721E4A-DAA0-4EAB-AED8-C130ED5811DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54721E4A-DAA0-4EAB-AED8-C130ED5811DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54721E4A-DAA0-4EAB-AED8-C130ED5811DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{277D7619-334E-4C4F-85B0-D29AECE1EADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{277D7619-334E-4C4F-85B0-D29AECE1EADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{277D7619-334E-4C4F-85B0-D29AECE1EADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{277D7619-334E-4C4F-85B0-D29AECE1EADB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
