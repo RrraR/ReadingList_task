@@ -100,8 +100,14 @@ export default function UserBook() {
     }
 
     const readingPriorityInput = (event) => {
-        const value = Math.max(0, Math.min(10, Number(event.target.value)));
-        setReadingPriority(value)
+        if (isFinished){
+            const value = 0;
+            setReadingPriority(value)
+        }
+        else {
+            const value = Math.max(1, Math.min(10, Number(event.target.value)));
+            setReadingPriority(value)
+        }
     }
 
     function collectionsHandler(event) {
