@@ -113,4 +113,94 @@ GO
 ALTER DATABASE [ReadingListDB] SET  READ_WRITE 
 GO
 
+create table Authors
+(
+    Id         int identity
+        constraint PK_Authors
+            primary key,
+    AuthorName nvarchar(100) not null
+)
+go
+
+create table Genres
+(
+    Id        int identity
+        constraint PK_Genres
+            primary key,
+    GenreName nvarchar(50) not null
+)
+go
+
+create table Series
+(
+    Id         int identity
+        constraint PK_Series
+            primary key,
+    SeriesName nvarchar(50)
+)
+go
+
+create table Books
+(
+    Id          int identity
+        constraint PK_Books
+            primary key,
+    Name        nvarchar(100) not null,
+    Length      int           not null,
+    Language    nvarchar(50)  not null,
+    FK_AuthorId int           not null
+        constraint FK_Books_Authors
+            references Authors,
+    FK_GenreId  int           not null
+        constraint FK_Books_Genres
+            references Genres,
+    FK_SeriesId int
+        constraint FK_Books_Series
+            references Series
+)
+go
+
+create table BooksOfUser
+(
+    Id                int identity
+        constraint PK_BooksOfUser
+            primary key,
+    FK_BookId         int                                           not null
+        constraint FK_BooksOfUser_Books
+            references Books,
+    ReadingPriority   int
+        constraint DF_BooksOfUser_ReadingPriority default 1         not null,
+    IsFinished        bit
+        constraint DF_BooksOfUser_IsFinished default 0              not null,
+    StartReadingDate  date
+        constraint DF__BooksOfUs__Start__0F624AF8 default getdate() not null,
+    FinishReadingDate date
+)
+go
+
+create table UserCollections
+(
+    Id             int identity
+        constraint PK_UserCollections
+            primary key,
+    CollectionName nvarchar(50)
+        constraint DF_UserCollections_UserCollectionName default N'Default' not null
+)
+go
+
+create table BooksOfUserToCollections
+(
+    Id              int identity
+        constraint PK_BooksOfUserToCollections
+            primary key,
+    FK_CollectionId int
+        constraint DF__BooksOfUs__FK_Co__245D67DE default 1 not null
+        constraint FK_BooksOfUserToCollections_UserCollections
+            references UserCollections,
+    FK_BookOfUserId int                                     not null
+        constraint FK_BooksOfUserToCollections_BooksOfUser
+            references BooksOfUser
+)
+go
+
 
