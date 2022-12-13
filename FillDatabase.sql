@@ -45,15 +45,9 @@ values ('default'),
 
 
 insert into BooksOfUser (FK_BookId, ReadingPriority, IsFinished, StartReadingDate, FinishReadingDate)
-values (1, 1, true, 2022 - 12 - 10, 2022 - 12 - 10),
-       (7, 1, false, 2022 - 07 - 11, null),
-       (10, 0, false, 2018 - 05 - 07, null),
-       (4, 1, false, 2022 - 12 - 06, null),
-       (2, 0, true, 2022 - 12 - 06, 2022 - 12 - 08);
+values (1, 1, 1, '2022 - 12 - 10', '2022 - 12 - 10'),
+       (7, 1, 0, '2022 - 07 - 11', null),
+       (10, 0, 0, '2018 - 05 - 07', null),
+       (4, 1, 0, '2022 - 12 - 06', null),
+       (2, 0, 1, '2022 - 12 - 06', '2022 - 12 - 08');
 
-insert into BooksOfUserToCollections (FK_CollectionId, FK_BookOfUserId)
-values (1, 3),
-       (1, 1),
-       (1, 14),
-       (1, 30),
-       (8, 30);
